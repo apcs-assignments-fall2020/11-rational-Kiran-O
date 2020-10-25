@@ -26,6 +26,7 @@ public class Rational
         int newDenominator = r.denominator*s.denominator; 
         
         Rational x = new Rational(newNumerator, newDenominator);
+        x = simplify(x);
         return x;
     }
 
@@ -104,26 +105,42 @@ public class Rational
 
     public Rational add(Rational s)
     {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        int newNumerator = this.numerator*s.denominator + s.numerator*this.denominator;
+        int newDenominator = this.denominator*s.denominator;
+
+        Rational x = new Rational(newNumerator, newDenominator);
+        x = simplify(x);
+        return x;
     }
     
     public Rational subtract(Rational s)
     {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        int newNumerator = this.numerator*s.denominator - s.numerator*this.denominator;
+        int newDenominator = this.denominator*s.denominator;
+
+        Rational x = new Rational(newNumerator, newDenominator);
+        x = simplify(x);
+        return x;
     }
     
     public Rational multiply(Rational s)
     {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        int newNumerator = this.numerator * s.numerator;
+        int newDenominator = this.denominator*s.denominator;
+
+        Rational x = new Rational(newNumerator, newDenominator);
+        x = simplify(x);
+        return x;
     }
     
     public Rational divide(Rational s)
     {
-        // REPLACE WITH YOUR CODE HERE
-        return null;
+        int newNumerator = this.numerator*s.denominator;
+        int newDenominator = this.denominator*s.numerator;
+
+        Rational x = new Rational(newNumerator, newDenominator);
+        x = simplify(x);
+        return x;
     }
 }
 
